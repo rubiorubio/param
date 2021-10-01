@@ -19,6 +19,7 @@ def home(request):
         userData = getTokens(code)
         context['name'] = userData['name']
         context['status'] = 1
+        print("11111111111111111111111111111111111111111111111111111111111111")
 
         response = render(request, 'content/index.html', context)
         response.set_cookie('sessiontoken', userData['id_token'], max_age=60*60*24, httponly=True)
