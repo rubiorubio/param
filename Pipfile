@@ -1,0 +1,34 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+decouple = "*"
+django = "*"
+appdirs = "*"
+asgiref = "*"
+certifi = "*"
+distlib = "*"
+dj-database-url = "*"
+django-crispy-forms = "*"
+filelock = "*"
+optional-django = "*"
+odict = "*"
+pillow = "*"
+plumber = "*"
+pytz = "*"
+setuptools = "*"
+six = "*"
+sqlparse = "*"
+python-decouple = "*"
+requests = "*"
+jose = "*"
+python-jose = "*"
+
+[dev-packages]
+black = "==21.5b2"
+ipykernel = "*"
+
+[requires]
+python_version = "3.9"
