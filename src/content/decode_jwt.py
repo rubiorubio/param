@@ -14,7 +14,7 @@ import time
 import os
 import urllib.request
 from jose import jwk, jwt
-from decouple import config
+from decouple import *
 from jose.utils import base64url_decode
 
 
