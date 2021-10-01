@@ -6,7 +6,7 @@ def home(request):
 ####################################################
 
 from django.shortcuts import render
-from decouple import *
+from decouple import config
 import base64
 import requests
 from content import decode_jwt
