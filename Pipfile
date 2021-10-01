@@ -4,7 +4,6 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-decouple = "*"
 django = "*"
 appdirs = "*"
 asgiref = "*"
@@ -21,8 +20,6 @@ pytz = "*"
 setuptools = "*"
 six = "*"
 sqlparse = "*"
-python-decouple = "*"
-requests = "*"
 jose = "*"
 python-jose = "*"
 
