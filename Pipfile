@@ -5,6 +5,9 @@ name = "pypi"
 
 [packages]
 django = "*"
+decouple = "*"
+python-decouple = "*"
+python-jose = "*"
 
 [dev-packages]
 black = "==21.5b2"
