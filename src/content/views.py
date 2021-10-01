@@ -17,7 +17,7 @@ def home(request):
     try:
         code = request.GET.get('code')
         userData = getTokens(code)
-        #context['name'] = userData['name']
+        context['name'] = userData['name']
         context['status'] = 1
         
 
@@ -28,7 +28,7 @@ def home(request):
         token = getSession(request)
         if token is not None:
             userData = decode_jwt.lambda_handler(token,None)
-            #context['name'] = userData['name']
+            context['name'] = userData['name']
             context['status'] = 1
             return render(request, 'content/index.html', context)
         return render(request, 'content/index.html', {'status': 0},print("11111111111111111111111111111111111111111111111111111111111111"))
@@ -53,7 +53,7 @@ def getTokens(code):
         'redirect_uri': REDIRECT_URI,
     }
 
-    response = requests.post(TOKEN_ENDPOINT, data=body,headers=headers )
+    response = requests.post(TOKEN_ENDPOINT, data=body, headers=headers)
     
     id_token = response.json()['id_token']
 
@@ -64,7 +64,7 @@ def getTokens(code):
     
     user = {
         'id_token': id_token,
-        # 'name': userData['name'],
+        'name': userData['name'],
         'emai': userData['email'],
     }
     return user
