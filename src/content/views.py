@@ -67,7 +67,7 @@ def getTokens(code):
         'name': userData['name'],
         'emai': userData['email'],
     }
-    return user
+    return user, print(user), print("333333333333333333333333333333333333333333333333333333333333333333333333333")
     
 def getSession(request):
     try:
