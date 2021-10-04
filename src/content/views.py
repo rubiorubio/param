@@ -72,7 +72,7 @@ def getTokens(code):
 def getSession(request):
     try:
         response = request.COOKIES["sessiontoken"]
-        return response
+        return response, print("66666666666666666666666666666666666666666666666666666666666")
     except:
         return None
 
