@@ -22,7 +22,7 @@ def home(request):
         
 
         response = render(request, 'content/index.html', context)
-        response.set_cookie('sessiontoken', userData['id_token'], max_age=60*60*24, httponly=True)
+        response.set_cookie('sessiontoken', userData['id_token'])
         return response, print("status 111111111111111111111111111111111111111111111111111111111111111111111111111111")
     except:
         token = getSession(request)
