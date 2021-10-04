@@ -23,7 +23,7 @@ def home(request):
 
         response = render(request, 'content/index.html', context)
         response.set_cookie('sessiontoken', userData['id_token'], max_age=60*60*24, httponly=True)
-        return response
+        return response, print("1111111111111111111111111111111111111111111111111111111111111111111111111111")
     except:
         token = getSession(request)
         if token is not None:
@@ -31,7 +31,7 @@ def home(request):
             #context['name'] = userData['name']
             context['status'] = 1
             return render(request, 'content/index.html', context)
-        return render(request, 'content/index.html', {'status': 0},print("11111111111111111111111111111111111111111111111111111111111111"))
+        return render(request, 'content/index.html', {'status': 0}), print("0000000000000000000000000000000000000000000000000000000000000000000000000000")
 
 def getTokens(code):
     TOKEN_ENDPOINT = config('TOKEN_ENDPOINT')
@@ -73,9 +73,7 @@ def getSession(request):
     try:
         response = request.COOKIES["sessiontoken"]
         return response
-        print("1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111")
     except:
-        print("22222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222")
         return None
 
 
