@@ -60,7 +60,7 @@ def getTokens(code):
     userData = decode_jwt.lambda_handler(id_token, None)
 
     if not userData:
-        return False
+        return False, print("$444444444444444444444444444444444444444444444444444444444444444444444444444444444")
     
     user = {
         'id_token': id_token,
