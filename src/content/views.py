@@ -66,7 +66,7 @@ def getTokens(code):
     user = {
         'id_token': id_token,
         'name': userData['name'],
-        'emai': userData['email'],
+        'email': userData['email'],
     }
     return user
     
@@ -75,7 +75,7 @@ def getSession(request):
         response = request.COOKIES["sessiontoken"]
         return response, print("88888888888888888888888888888888888888888888")
     except:
-        return print("666666666666666 this is", request)
+        return print("666666666666666 this is", request.code, "      !!!!")
 print("777777777777777777777777777777777777777777777777777777777777")
 
 
