@@ -75,8 +75,8 @@ def getSession(request):
         response = request.COOKIES["sessiontoken"]
         return response, print("88888888888888888888888888888888888888888888")
     except:
-        return print("777777777777777777777777777777777777777777777777777777777777"), print(request)
-
+        return print(request)
+print("777777777777777777777777777777777777777777777777777777777777")
 
 
 #########################################################################
