@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from requests.api import request
 
 def home(request):
     return render(request,'content/index.html',{})
@@ -27,7 +28,7 @@ def home(request):
     except:
         token = getSession(request)
         if token is not None:
-            userData = decode_jwt.lambda_handler(token,None)
+            userData = decode_jwt.lambda_handler(token, None)
             context['name'] = userData['name']
             context['status'] = 1
             return render(request, 'content/index.html', context)
@@ -39,7 +40,7 @@ def getTokens(code):
     CLIENT_ID = config('CLIENT_ID')
     CLIENT_SECRET = config('CLIENT_SECRT')
 
-    encodeData = base64.b64encode(bytes(f"{CLIENT_ID}:{CLIENT_SECRET}","ISO-8859-1")).decode("ascii")
+    encodeData = base64.b64encode(bytes(f"{CLIENT_ID}:{CLIENT_SECRET}", "ISO-8859-1")).decode("ascii")
 
     headers = {
         'Content-Type': 'application/x-www-from-urlencoded',
@@ -75,7 +76,8 @@ def getSession(request):
         return response
     except:
         return None
-
+print("8888888888888888888888888888888888")
+print(request)
 
 
 #########################################################################
