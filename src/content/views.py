@@ -60,21 +60,21 @@ def getTokens(code):
     userData = decode_jwt.lambda_handler(id_token, None)
 
     if not userData:
-        return False, print("$444444444444444444444444444444444444444444444444444444444444444444444444444444444")
+        return False
     
     user = {
         'id_token': id_token,
         'name': userData['name'],
         'emai': userData['email'],
     }
-    return user, print("333333333333333333333333333333333333333333333333333333333333333333333333333")
+    return user
     
 def getSession(request):
     try:
         response = request.COOKIES["sessiontoken"]
-        return response, print("66666666666666666666666666666666666666666666666666666666666")
+        return response, print("11111111111111111111111111111111111111111111111111")
     except:
-        return None
+        return None, print("11111111111111111111111111111111111111111111111111")
 
 
 
