@@ -70,14 +70,13 @@ def getTokens(code):
     }
     return user
     
-def getSession(request):
+def getSession(self, request):
     try:
         response = request.COOKIES["sessiontoken"]
-        return response
+        return response, print("88888888888888888888888888888888888888888888")
     except:
-        return None
-print("8888888888888888888888888888888888")
-print(requests.request.COOKIES["sessiontoken"])
+        return None, print("9999999999999999999999999999999999999999999999999999")
+
 
 
 #########################################################################
