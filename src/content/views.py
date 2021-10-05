@@ -70,7 +70,7 @@ def getTokens(code):
     }
     return user
     
-def getSession(self, request):
+def getSession(request):
     try:
         response = request.COOKIES["sessiontoken"]
         return response, print("88888888888888888888888888888888888888888888")
