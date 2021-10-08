@@ -24,7 +24,7 @@ def home(request):
 
         response = render(request, 'content/index.html', context)
         response.set_cookie('sessiontoken', userData['id_token'])
-        return response, print("status 111111111111111111111111111111111111111111111111111111111111111111111111111111")
+        return response
     except:
         token = getSession(request)
         if token is not None:
@@ -73,10 +73,10 @@ def getTokens(code):
 def getSession(request):
     try:
         response = request.COOKIES["sessiontoken"]
-        return response, print("88888888888888888888888888888888888888888888")
+        return response
     except:
-        return print("666666666666666 this is")
-print("777777777777777777777777777777777777777777777777777777777777")
+        return None
+
 
 
 #########################################################################
