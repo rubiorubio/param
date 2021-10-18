@@ -72,7 +72,6 @@ def lambda_handler(event, context):
         return False
     # now we can use the claims
     print(claims)
-    print('999999999999999999999999999999999999999999999999')
     return claims
     
         
