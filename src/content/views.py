@@ -23,7 +23,7 @@ def home(request):
         
 
         response = render(request, 'content/index.html', context)
-        response.set_cookie('sessiontoken', userData['id_token'])
+        response.set_cookie('sessiontoken', userData['id_token'], max_age=60*60*24)
         return response
     except:
         token = getSession(request)
@@ -38,7 +38,7 @@ def getTokens(code):
     TOKEN_ENDPOINT = config('TOKEN_ENDPOINT')
     REDIRECT_URI = config('REDIRECT_URI')
     CLIENT_ID = config('CLIENT_ID')
-    CLIENT_SECRET = config('CLIENT_SECRT')
+    CLIENT_SECRET = config('CLIENT_SECRET')
 
     encodeData = base64.b64encode(bytes(f"{CLIENT_ID}:{CLIENT_SECRET}", "ISO-8859-1")).decode("ascii")
 
