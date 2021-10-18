@@ -1,8 +1,8 @@
 from django.shortcuts import render
 from requests.api import request
 
-def home(request):
-    return render(request,'content/index.html',{})
+# def home(request):
+#     return render(request,'content/index.html',{})
 
 ####################################################
 

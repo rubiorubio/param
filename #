@@ -1,0 +1,56 @@
+[33mcommit a5148e13d0e25e5966ea61419e4fd681ee25a9ce[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: Sergei Egorchenko <sergei.egorchenko@protos-tec.de>
+Date:   Mon Oct 18 15:29:23 2021 +0200
+
+    Commit message in quotes
+
+[1mdiff --git a/src/content/decode_jwt.py b/src/content/decode_jwt.py[m
+[1mindex 2d888c0..7195991 100644[m
+[1m--- a/src/content/decode_jwt.py[m
+[1m+++ b/src/content/decode_jwt.py[m
+[36m@@ -72,7 +72,6 @@[m [mdef lambda_handler(event, context):[m
+         return False[m
+     # now we can use the claims[m
+     print(claims)[m
+[31m-    print('999999999999999999999999999999999999999999999999')[m
+     return claims[m
+     [m
+         [m
+[1mdiff --git "a/to be pushed, run\357\200\272" "b/to be pushed, run\357\200\272"[m
+[1mnew file mode 100644[m
+[1mindex 0000000..3e0546a[m
+[1m--- /dev/null[m
+[1m+++ "b/to be pushed, run\357\200\272"[m	
+[36m@@ -0,0 +1,32 @@[m
+[32m+[m[32m[33mcommit 68dbfceaf12d4d95d2b436cab7de994c91d04e81[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m[m
+[32m+[m[32mAuthor: Sergei Egorchenko <sergei.egorchenko@protos-tec.de>[m
+[32m+[m[32mDate:   Mon Oct 18 15:10:44 2021 +0200[m
+[32m+[m
+[32m+[m[32m    Commit message in quotes[m
+[32m+[m
+[32m+[m[32m[1mdiff --git a/src/.env b/src/.env[m[m
+[32m+[m[32m[1mindex ab14de9..5e6e3cd 100644[m[m
+[32m+[m[32m[1m--- a/src/.env[m[m
+[32m+[m[32m[1m+++ b/src/.env[m[m
+[32m+[m[32m[36m@@ -1,4 +1,4 @@[m[m
+[32m+[m[32m[31m-REDIRECT_URI = 'https://shop-rubio.herokuapp.com'[m[m
+[32m+[m[32m[32m+[m[32mREDIRECT_URI = 'https://test-param.herokuapp.com/'[m[m
+[32m+[m[32m TOKEN_ENDPOINT = 'https://rubio-shop.auth.eu-central-1.amazoncognito.com/oauth2/token'[m[m
+[32m+[m[32m [m[m
+[32m+[m[32m CLIENT_ID = '17s5ejtg2ncu1epu2f4ieuset9'[m[m
+[32m+[m[32m[1mdiff --git a/src/content/decode_jwt.py b/src/content/decode_jwt.py[m[m
+[32m+[m[32m[1mindex 7195991..2d888c0 100644[m[m
+[32m+[m[32m[1m--- a/src/content/decode_jwt.py[m[m
+[32m+[m[32m[1m+++ b/src/content/decode_jwt.py[m[m
+[32m+[m[32m[36m@@ -72,6 +72,7 @@[m [mdef lambda_handler(event, context):[m[m
+[32m+[m[32m         return False[m[m
+[32m+[m[32m     # now we can use the claims[m[m
+[32m+[m[32m     print(claims)[m[m
+[32m+[m[32m[32m+[m[32m    print('999999999999999999999999999999999999999999999999')[m[m
+[32m+[m[32m     return claims[m[m
+[32m+[m[32m     [m[m
+[32m+[m[32m         [m[m
+[32m+[m[32m[1mdiff --git a/src/static/assets/img/Sergei_Profile.png b/src/static/assets/img/Sergei_Profile.png[m[m
+[32m+[m[32m[1mnew file mode 100644[m[m
+[32m+[m[32m[1mindex 0000000..9395533[m[m
+[32m+[m[32mBinary files /dev/null and b/src/static/assets/img/Sergei_Profile.png differ[m
