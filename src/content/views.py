@@ -18,7 +18,7 @@ def home(request):
     try:
         code = request.GET.get('code')
         userData = getTokens(code)
-        context['name'] = userData['name']
+      #  context['name'] = userData['name']
         context['status'] = 1
         
 
