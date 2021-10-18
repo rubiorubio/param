@@ -13,13 +13,6 @@ import requests
 from content import decode_jwt
 import os
 
-def getSession(request):
-    try:
-        response = request.COOKIES["sessiontoken"]
-        return response
-    except:
-        return None
-        
 def home(request):
     context = {}
     try:
@@ -87,8 +80,3 @@ def getSession(request):
 
 
 #########################################################################
-#%%
-
-variablee = 'fffff'
-print(variablee)
-# %%
