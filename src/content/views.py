@@ -1,12 +1,4 @@
 from django.shortcuts import render
-from requests.api import request
-
-# def home(request):
-#     return render(request,'content/index.html',{})
-
-####################################################
-
-from django.shortcuts import render
 from decouple import config
 import base64
 import requests
@@ -18,7 +10,7 @@ def home(request):
     try:
         code = request.GET.get('code')
         userData = getTokens(code)
-      #  context['name'] = userData['name']
+        context['name'] = userData['name']
         context['status'] = 1
         
 
